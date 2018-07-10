@@ -39,7 +39,7 @@ class App extends Component {
               <Form rutine={this.getRutines} />
             </div> 
 
-            <div className = "col-md-8" >
+            <div className = "col-md-6" >
               <Rutine rutines={this.state.rutines} />
             </div>
 

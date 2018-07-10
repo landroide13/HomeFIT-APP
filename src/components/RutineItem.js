@@ -12,7 +12,8 @@ const RutineItem = (props) => {
         <td>{props.rutine.name}</td>
         <td>{props.rutine.set}</td>
         <td>{props.rutine.rep}</td>
-        <td> Edit / Delete </td>
+        <td><button className="btn btn-sm btn-danger" onClick >Delete</button> 
+        <button  className="btn btn-sm btn-success" onClick >Edit</button> </td>
       </tr>
       
     </React.Fragment>

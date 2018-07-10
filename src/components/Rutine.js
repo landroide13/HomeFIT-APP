@@ -18,7 +18,7 @@ class  Rutine extends Component {
     return (
       <React.Fragment>
 
-      <div className="col-md-6">
+      
         <table className = "table table-striped" >
           <thead>
             <tr>
@@ -33,7 +33,7 @@ class  Rutine extends Component {
             { rutineItem }
           </tbody> 
         </table>
-      </div>       
+           
         
       </React.Fragment>
     )
