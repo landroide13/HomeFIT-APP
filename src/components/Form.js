@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import uuid from 'uuid';
 
 export default class Form extends Component {
   constructor(){
@@ -6,6 +7,7 @@ export default class Form extends Component {
     this.state = {
       exer: {
         id: '',
+        date: '',
         name:'',
         set:'',
         rep:''
@@ -31,7 +33,8 @@ export default class Form extends Component {
     }else{
       this.setState({
         exer:{
-          id: Date.now(),
+          id: uuid.v4(),
+          date: new Date().toLocaleString(),
           name:this.refs.name.value,
           set: this.refs.set.value,
           rep: this.refs.rep.value

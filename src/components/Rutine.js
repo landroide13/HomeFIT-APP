@@ -2,6 +2,14 @@ import React, { Component } from 'react'
 import RutineItem from './RutineItem'
 
 class  Rutine extends Component {
+  constructor(){
+    super();
+    this.deleteRutine = this.deleteRutine.bind(this);
+  }
+
+  deleteRutine = (id) =>{
+    this.props.onDelete(id);
+  }
   
   render(){
 
@@ -10,7 +18,7 @@ class  Rutine extends Component {
     if(this.props.rutines){
       rutineItem = this.props.rutines.map(rutine =>{
         return(
-          <RutineItem key={rutine.name} rutine={ rutine } />
+          <RutineItem  key={rutine.name} rutine={ rutine } onDelete={this.deleteRutine} />
         )
       })
     }
@@ -22,7 +30,7 @@ class  Rutine extends Component {
         <table className = "table table-striped" >
           <thead>
             <tr>
-              <th scope="col">id</th>
+              <th scope="col">Date</th>
               <th scope="col">Name</th>
               <th scope="col">Sets</th>
               <th scope="col">Reps</th>
